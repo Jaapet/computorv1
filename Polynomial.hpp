@@ -21,8 +21,6 @@ class Polynomial
 		~Polynomial();
 
 		void	solve();
-		void	setDegree(int degree);
-		int		getDegree() const;
 };
 
 Polynomial::Polynomial(std::string expression, float a, float b, float c, int degree)
@@ -35,16 +33,6 @@ Polynomial::Polynomial(std::string expression, float a, float b, float c, int de
 }
 
 Polynomial::~Polynomial(){}
-
-void	Polynomial::setDegree(int degree)
-{
-	this->degree = degree;
-}
-
-int	Polynomial::getDegree() const
-{
-	return this->degree;
-}
 
 void	Polynomial::solve()
 {
