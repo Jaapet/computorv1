@@ -22,7 +22,6 @@ int main(int ac, char **av)
 			status = 'p';
 		if (status == 'p' && av[1][i] == ' ')
 		{
-			//std::cout << buffV << ", " << buffP << std::endl;
 			if (atof(buffP.c_str()) != atoi(buffP.c_str()) || atof(buffP.c_str()) < 0)
 				return (std::cerr << "Invalid power format." << std::endl, 1);
 			if (after == false)
@@ -60,7 +59,6 @@ int main(int ac, char **av)
 	if (atoi(buffP.c_str()) > maxDegree)
 		maxDegree = atoi(buffP.c_str());
 
-	// std::cout << values[2] << ", " << values[1] << ", " << values[0] << ", " << maxDegree << std::endl;
 
 	Polynomial *p = new Polynomial(av[1], values[2], values[1], values[0], maxDegree);
 	p->solve();
