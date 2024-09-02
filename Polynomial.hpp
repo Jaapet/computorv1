@@ -17,7 +17,7 @@ class Polynomial
 		int		degree;
 		
 	public:
-		Polynomial(std::string expression, float a, float b, float c);
+		Polynomial(std::string expression, float a, float b, float c, int maxP);
 		~Polynomial();
 
 		void	solve();
@@ -25,13 +25,13 @@ class Polynomial
 		int		getDegree() const;
 };
 
-Polynomial::Polynomial(std::string expression, float a, float b, float c)
+Polynomial::Polynomial(std::string expression, float a, float b, float c, int degree)
 {
 	this->expression = expression;
 	this->a = a;
 	this->b = b;
 	this->c = c;
-	this->degree = 0;
+	this->degree = degree;
 }
 
 Polynomial::~Polynomial(){}
